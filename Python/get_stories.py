@@ -1,8 +1,9 @@
+# coding=UTF-8
 import requests
 from lxml import etree
 import os
 import time
-
+#这个是我自己写的关于爬取小说的一个东西，还需要很多手动去除内容的操作才能生成一个合适的txt文件，很粗浅
 # 获取小说主页的hmtl
 #目前只测试了这个biquge5200的网站，其他的网站还么测试
 def get_main_html():
