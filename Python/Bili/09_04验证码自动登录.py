@@ -9,7 +9,7 @@ from chaojiying import Chaojiying_Client
 
 def get_code():
     im = open('code.jpg', 'rb').read()
-    chaojiyinguser = Chaojiying_Client('yuanbo6', 'yuanbuo19941205', '643a35e1bf6b4f7a220c5c08989dd71e')
+    chaojiyinguser = Chaojiying_Client('超级鹰账号', '超级鹰密码', '软件ID')
     code_result = chaojiyinguser.PostPic(im,1902)
     yanzhengma=code_result.get('pic_str')
     return yanzhengma
@@ -39,8 +39,8 @@ data = {
     '__VIEWSTATE': __VIEWSTATE,
     '__VIEWSTATEGENERATOR': __VIEWSTATEGENERATOR,
     'from':'http://so.gushiwen.cn/user/collect.aspx',
-    'email':'944947973@qq.com',
-    'pwd':'yuanbuo19941205',
+    'email':'古诗文网账号',
+    'pwd':'古诗文网密码',
     'code':code_text,
     'denglu':'登录',
 }
