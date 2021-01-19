@@ -19,7 +19,7 @@ with open('./code.jpg','wb') as fp:
     fp.write(img_data)
 #调用chaojiying的东西
 im = open('code.jpg', 'rb').read()
-chaojiyinguser = Chaojiying_Client('yuanbo6', 'yuanbuo19941205', '643a35e1bf6b4f7a220c5c08989dd71e')
+chaojiyinguser = Chaojiying_Client('超级鹰用户名', '超级鹰密码', '软件ID')
 code_result = chaojiyinguser.PostPic(im,1902)#验证码结果
 # print(type(code_result))
 # print(code_result)
@@ -30,8 +30,8 @@ yanzhengma=code_result.get('pic_str')
 login_url='https://so.gushiwen.cn/user/login.aspx?from=http%3a%2f%2fso.gushiwen.cn%2fuser%2fcollect.aspx'
 data = {
     'from':'http://so.gushiwen.cn/user/collect.aspx',
-    'email':'944947973@qq.com',
-    'pwd':'yuanbuo19941205',
+    'email':'网站账号',
+    'pwd':'网站密码',
     'code':yanzhengma,
     'denglu':'登录',
 }
