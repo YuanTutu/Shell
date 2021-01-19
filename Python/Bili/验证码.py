@@ -19,6 +19,6 @@ with open('./code.jpg','wb') as fp:
     fp.write(img_data)
 #调用chaojiying的东西
 im = open('code.jpg', 'rb').read()
-chaojiyinguser = Chaojiying_Client('yuanbo6', 'yuanbuo19941205', '643a35e1bf6b4f7a220c5c08989dd71e')
+chaojiyinguser = Chaojiying_Client('超级鹰用户名', '超级鹰密码', '软件ID')
 code_result = chaojiyinguser.PostPic(im,1902)#验证码结果
 print(code_result)
