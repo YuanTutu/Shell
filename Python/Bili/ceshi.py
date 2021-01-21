@@ -14,6 +14,7 @@ import json
 # https://video.pearvideo.com/mp4/third/20210118/1611151077092-15765543-133916-hd.mp4
 # 真实视频链接
 # https://video.pearvideo.com/mp4/third/20210118/cont-1716852-15765543-133916-hd.mp4
+
 def get_response(html_url):
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36',
@@ -52,18 +53,20 @@ def save_video(video_url,titles):
         print('正在保存：',titles)
         print(video_url)
 
-for page in range(0,10,10):#80为上限
+for page in range(0,80,10):#80为上限
     url = 'https://www.pearvideo.com/popular_loading.jsp'
     params = {
         'reqType':'1',
         'categoryId':'',
         'start':'{}'.format(page),
         'sort':'10',
-        'mrd':'0.7711852368514107'
+        'mrd':'0.7711852368514107',
+        # 'Connection': 'close',
     }
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
     }
+
     response=requests.get(url=url,headers=headers,params=params)
     # print(response.text)
 
