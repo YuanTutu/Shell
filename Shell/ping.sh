@@ -1,6 +1,7 @@
 #!/bin/bash
 # 用于批量ping一些IP并写入ip.txt文件
 # 可以看出文件的路径可以自己配置
+# 需要自己设置定时任务去定时执行
 DATE=$(date +%Y%m%d) 
 if 
     [ ! -d /root/$DATE ] 
