@@ -5,6 +5,11 @@ package main
 //切片 s 的长度和容量可通过表达式 len(s) 和 cap(s) 来获取。
 //你可以通过重新切片来扩展一个切片，给它提供足够的容量。试着修改示例程序中的切片操作，向外扩展它的容量，看看会发生什么。
 import "fmt"
+
+func printSlice(s []int){
+	fmt.Printf("len=%d cap=%d %v\n",len(s),cap(s),s)
+}
+
 func main() {
 		s:=[]int{2,3,5,7,11,13}
 		printSlice(s)
@@ -22,6 +27,3 @@ func main() {
 		printSlice(s)
 }
 
-func printSlice(s []int){
-	fmt.Printf("len=%d cap=%d %v\n",len(s),cap(s),s)
-}
