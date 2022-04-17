@@ -1,3 +1,4 @@
+# 这他么是个斐波那契数列
 def fib(n):
     if n == 1:
         return [1]
